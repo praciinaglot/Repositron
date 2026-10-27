@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: "https://repositronfrontend-2h2laeos4-yogitas-projects-f217441b.vercel.app"
+  origin: "https://repositron-3b.vercel.app"
 }));
 
 
