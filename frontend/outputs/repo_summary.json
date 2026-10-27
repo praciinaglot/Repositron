@@ -1,0 +1,7 @@
+{
+  "stack": ["Next.js", "Node.js"],
+  "entryPoints": ["app/page.tsx"],
+  "services": ["API", "Auth"],
+  "envVars": ["DATABASE_URL", "JWT_SECRET"]
+}
+

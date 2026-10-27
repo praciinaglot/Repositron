@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://repositron.onrender.com/api/$1"
+    }
+  ]
+}

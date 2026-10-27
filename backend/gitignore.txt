@@ -1,0 +1,4 @@
+node_modules/
+repos/react/
+repos/vscode/
+package-lock.json

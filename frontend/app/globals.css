@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* DO NOT set background on body or html */
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+@keyframes waveMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-wave {
+  background-size: 300% 300%;
+  animation: waveMove 14s ease-in-out infinite;
+}
+
+@keyframes waveMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===== 3D UI EFFECT ===== */
+.ui-3d {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ui-3d:hover {
+  transform: translateY(-2px);
+}
+
+.ui-3d:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* ===== GRID BACKGROUND ===== */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.25; /* 🔑 VERY IMPORTANT */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== SOFT CENTER GLOW ===== */
+.grid-glow {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 60% 40%,
+      rgba(168, 85, 247, 0.18),
+      transparent 60%
+    );
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
+
